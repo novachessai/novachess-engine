@@ -158,12 +158,21 @@ the ones served by the application.
 
 The in-app version additionally wraps Nova's policy output with a
 small calibration layer used to tune playing strength across rating
-tiers. The two main components are a **per-tier temperature schedule**
-(the primary calibration lever) and an **evaluation-only filter**:
-after Nova samples a candidate move, Stockfish is consulted at low
-depth to evaluate that specific candidate; if its evaluation falls
-below a tier-dependent quality threshold, the move is probabilistically
-replaced by re-sampling from Nova's own distribution.
+tiers. The primary lever is a **per-tier temperature schedule**. On
+top of that, Nova's sampled candidates pass through a probabilistic
+quality check: high-confidence picks (where Nova's policy concentrates
+significant probability mass on a single move) are played directly,
+while lower-confidence picks may be sent to Stockfish for a low-depth
+evaluation. If the evaluation falls below a tier-dependent quality
+threshold, the move *may* be replaced by re-sampling from Nova's
+distribution. Both the rate at which positions are evaluated and the
+rate at which sub-threshold moves are actually replaced vary by tier,
+so the bot's mistake profile matches the empirical chess.com CP-loss
+profile at that level — at lower tiers, more sub-optimal moves slip
+through (because players at that level make them); at higher tiers,
+far fewer do. Additional components (tablebase-aware adjustments in
+low-piece-count endgames, voluntary-draw filtering when winning, and
+other tuning) layer on top of this base flow.
 
 **Every move the in-app bot plays still originates from Nova's policy
 distribution.** Stockfish is never used to suggest, generate, or
