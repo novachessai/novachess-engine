@@ -326,9 +326,7 @@ of the same policy weights published here:
   CP-loss profile at that level. At lower tiers, more sub-optimal
   moves slip through (because players at that level genuinely make
   them); at higher tiers, far fewer do. Additional calibration
-  components (tablebase-aware adjustments in low-piece-count
-  endgames, voluntary-draw filtering when winning, and other tuning)
-  layer on top of this base flow.
+  components layer on top of this base flow.
 
 **Every move the in-app bot plays still originates from Nova's policy
 distribution.** Stockfish is never used to suggest, generate, or

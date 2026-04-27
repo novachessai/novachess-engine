@@ -170,9 +170,8 @@ rate at which sub-threshold moves are actually replaced vary by tier,
 so the bot's mistake profile matches the empirical chess.com CP-loss
 profile at that level — at lower tiers, more sub-optimal moves slip
 through (because players at that level make them); at higher tiers,
-far fewer do. Additional components (tablebase-aware adjustments in
-low-piece-count endgames, voluntary-draw filtering when winning, and
-other tuning) layer on top of this base flow.
+far fewer do. Additional calibration components layer on top of this
+base flow.
 
 **Every move the in-app bot plays still originates from Nova's policy
 distribution.** Stockfish is never used to suggest, generate, or
