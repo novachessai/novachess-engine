@@ -60,3 +60,6 @@ Thumbs.db
 *.log
 *.tmp
 nohup.out
+
+# ----- Local bootstrap helpers (not for public repo) -----
+*.bat
