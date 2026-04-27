@@ -16,6 +16,13 @@ if exist ".git" (
 )
 
 echo.
+echo === Setting commit identity (local to this repo) ===
+git config user.name "novachessai"
+git config user.email "novachessai@gmail.com"
+git config --get user.name
+git config --get user.email
+
+echo.
 echo === Fetching remote ===
 git fetch origin
 if errorlevel 1 goto :err
@@ -60,8 +67,18 @@ git commit -m "%MSG%"
 if errorlevel 1 goto :err
 
 echo.
+echo === Ensuring local branch is named 'main' ===
+REM Older git defaults to 'master'. Rename if needed (no-op if already main).
+for /f "tokens=*" %%b in ('git symbolic-ref --short HEAD') do set CURBRANCH=%%b
+if /i not "%CURBRANCH%"=="main" (
+    echo Renaming %CURBRANCH% -^> main
+    git branch -m %CURBRANCH% main
+    if errorlevel 1 goto :err
+)
+
+echo.
 echo === Pushing to origin/main ===
-git push origin main
+git push -u origin main
 if errorlevel 1 goto :err
 
 echo.
