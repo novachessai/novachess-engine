@@ -252,8 +252,7 @@ M11–20 (+0.14, +0.21 pp); Nova leads in M21–35 (+0.22 pp).
 | 16–19 | 69,487 | 54.02 | **57.40** | 56.97 |
 | 12–15 | 56,412 | 55.42 | **58.57** | 58.26 |
 | 8–11 | 40,477 | 56.19 | 59.33 | **59.80** |
-| 4–7 | 24,281 | 58.33 | 60.87 | **62.71** |
-| 2–3 (late endgame) | 3,096 | 62.86 | 63.28 | **65.18** |
+| 3–7 (late endgame) | 27,377 | 58.84 | 61.14 | **62.99** |
 
 ### Mean P(actual)
 
@@ -265,18 +264,12 @@ M11–20 (+0.14, +0.21 pp); Nova leads in M21–35 (+0.22 pp).
 | 16–19 | 42.25 | 45.21 | **45.52** |
 | 12–15 | 43.75 | 46.71 | **47.32** |
 | 8–11 | 44.57 | 47.50 | **48.90** |
-| 4–7 | 47.30 | 49.70 | **52.79** |
-| 2–3 | 54.82 | 53.23 | **56.76** |
+| 3–7 | 48.15 | 50.10 | **53.24** |
 
-Nova's Mean P(actual) is higher than Maia-3's in seven of eight
+Nova's Mean P(actual) is higher than Maia-3's in six of seven
 piece-count buckets (all but 24–27). Nova's hit1 is higher than
-Maia-3's in the three lowest buckets (8–11, 4–7, 2–3). The
-Nova-vs-Maia-3 Mean P gaps in the three lowest buckets are
-+1.40 pp, +3.09 pp, +3.53 pp.
-
-Note: the 2–3 piece bucket has only **3,096 positions** (compared to
-24K+ in every other bucket); values in that row are more variable
-than the rest of the table and should be read with that in mind.
+Maia-3's in the two lowest buckets (8–11, 3–7). The Nova-vs-Maia-3
+Mean P gaps in those two buckets are +1.40 pp and +3.14 pp.
 
 
 ## Deltas — Nova vs. Maia-3, per band, per metric (all filter)
