@@ -1,0 +1,174 @@
+Nova Chess Engine License
+
+Copyright (c) 2026 Nova Chess. All rights reserved.
+
+This license governs use of the Nova Chess engine, which includes the
+model weights (the "Model") and the accompanying source code (the
+"Code"), together the "Software," published at
+https://github.com/novachessai/novachess-engine and
+https://huggingface.co/novachess.
+
+By downloading, accessing, or using the Software, you agree to the
+terms below. If you do not agree, you may not use the Software.
+
+
+1. PERMITTED USES
+
+Subject to the restrictions in Section 2 and the attribution
+requirement in Section 3, Nova Chess grants you a worldwide,
+royalty-free, non-exclusive license to do the following with the
+Software:
+
+  (a) Run the Model on your own hardware for any personal, research,
+      educational, or hobbyist purpose.
+
+  (b) Copy, modify, and redistribute the Code, including inference
+      servers, evaluation scripts, and wrappers.
+
+  (c) Benchmark, compare, or analyze the Model against other models,
+      and publish the results — including in peer-reviewed papers,
+      blog posts, theses, and conference presentations, whether or
+      not those venues charge for access.
+
+  (d) Fine-tune the Model on your own data for personal, research,
+      or educational use, subject to Section 4.
+
+  (e) Operate a publicly playable bot that uses the Model on
+      Lichess, Discord, Twitch, or similar platforms, including one
+      whose operator accepts donations, tips, or sponsorships — so
+      long as access to the bot itself is not gated by payment.
+
+  (f) Use the Model as a demonstration or teaching tool in lessons,
+      courses, workshops, or coaching sessions, including paid ones,
+      provided the Model itself is not the product or service being
+      sold.
+
+  (g) Embed the Software in open-source projects that are not
+      themselves commercial products.
+
+For clarity, a "commercial product" in (g) means software or services
+offered for sale, subscription, licensing revenue, or equivalent
+consideration. A free open-source project that accepts donations is
+not a commercial product.
+
+
+2. RESTRICTED USES
+
+Without a separate commercial license from Nova Chess, you may not:
+
+  (a) Sell, license, or sublicense the Model weights as part of a
+      paid product, subscription, or service.
+
+  (b) Offer a paid API, hosted inference endpoint, or similar service
+      whose functionality depends on running the Model.
+
+  (c) Include the Model or the Code in a commercial chess
+      application, platform, game, analysis service, coaching
+      service, training service, or competitive product.
+
+  (d) Train, fine-tune, distill, or otherwise create a derivative
+      model based on the Model, and then sell, license, sublicense,
+      or offer paid access to that derivative model. See Section 4.
+
+  (e) Use the Software to build, launch, or operate a service
+      intended to compete directly with Nova Chess (www.novachess.ai),
+      whether or not such a service charges users.
+
+  (f) Remove, obscure, or modify the copyright notice, this license
+      text, or the attribution required by Section 3.
+
+
+3. ATTRIBUTION
+
+If you redistribute the Software, incorporate it in a public-facing
+project, or operate a public deployment (including bots under
+Section 1(e)), you must clearly credit Nova Chess and link to this
+project. A credit of the form:
+
+      "Powered by Nova Chess — https://github.com/novachessai/novachess-engine"
+
+is sufficient. The credit must appear in a reasonably prominent
+location — for example, in the README of a redistributed repository,
+in the profile or about page of a deployed bot, or in the "about"
+section of a user-facing application.
+
+
+4. FINE-TUNES AND DERIVATIVE MODELS
+
+A model obtained by fine-tuning, distilling, LoRA-adapting, merging,
+or otherwise deriving from the Model (a "Derivative Model") is itself
+subject to this license. In particular, you may fine-tune the Model
+and share the resulting weights for personal, research, or
+educational use, but you may not sell or offer paid access to a
+Derivative Model without a separate commercial license from Nova
+Chess.
+
+This clause does not cover models that are trained independently
+from scratch without using the Model's weights as a starting point,
+even if such models are trained on data the Model also saw.
+
+
+5. MODEL OUTPUTS
+
+Outputs produced by running the Model — including predicted moves,
+complete games, evaluations, probability distributions, and any
+textual or numeric data derived from inference — are not subject to
+the restrictions in Section 2. You may use, publish, and distribute
+Model outputs freely for any purpose, commercial or otherwise.
+
+
+6. COMMERCIAL LICENSING
+
+Commercial licenses that grant rights beyond those in Section 1 are
+available from Nova Chess. For inquiries, contact
+support@novachess.ai.
+
+
+7. TERMINATION
+
+If you breach any term of this license, your rights under Section 1
+terminate automatically. Your rights are reinstated if you cure the
+breach within thirty (30) days of becoming aware of it, provided
+Nova Chess has not already notified you in writing of the breach.
+Sections 3, 5, 8, 9, and 10 survive termination.
+
+
+8. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. THE MODEL IS A STATISTICAL PREDICTOR AND MAKES NO
+GUARANTEE OF CORRECTNESS, LEGALITY, OR SUITABILITY FOR ANY
+PARTICULAR USE.
+
+
+9. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL NOVA
+CHESS, ITS CONTRIBUTORS, OR ANYONE ASSOCIATED WITH THE SOFTWARE BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+10. GOVERNING LAW
+
+This license is governed by the laws of the Commonwealth of
+Massachusetts, United States, without regard to conflict-of-law
+principles. Any dispute arising out of or relating to this license
+shall be brought exclusively in the state or federal courts located
+in Massachusetts, and you consent to the personal jurisdiction of
+those courts.
+
+
+11. ENTIRE AGREEMENT
+
+This license is the entire agreement between you and Nova Chess
+regarding the Software and supersedes any prior communications,
+understandings, or agreements on the subject.
+
+---
+
+Questions about this license or commercial use: support@novachess.ai
