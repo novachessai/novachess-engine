@@ -341,7 +341,7 @@ aggregate metric in this sample.
 ## Reproducing these numbers
 
 The 600,000-position evaluation sample (`unified_sample_600k.pkl`)
-and the Nova model weights (`nova.onnx` + `nova.onnx.data`)
+and the Nova model weights (`nova_v3b.onnx` + `nova_v3b.onnx.data`)
 are published on Hugging Face:
 
 <https://huggingface.co/novachess/novachess-engine>

@@ -12,18 +12,20 @@ single prediction. This doc adds what's useful beyond that.
 
 Nova is distributed as two files:
 
-- `nova.onnx` — the graph (≈ 1 MB)
-- `nova.onnx.data` — the weights, external-data sidecar (≈ 400 MB)
+- `nova_v3b.onnx` — the graph (≈ 1 MB)
+- `nova_v3b.onnx.data` — the weights, external-data sidecar (≈ 400 MB)
 
-Both files must sit in the same directory when loading. ONNX Runtime
-resolves the sidecar automatically via the relative path embedded in
-the graph file — you only pass the `.onnx` path to `InferenceSession`:
+Both files must sit in the same directory when loading **and keep
+their exact filenames** — the `.onnx` graph file embeds a reference
+to `nova_v3b.onnx.data` by name. Renaming the sidecar will break loading.
+You only pass the `.onnx` path to `InferenceSession`; the runtime
+resolves the sidecar automatically:
 
 ```python
 import onnxruntime as ort
 
 session = ort.InferenceSession(
-    "nova.onnx",
+    "nova_v3b.onnx",
     providers=["CPUExecutionProvider"],  # or CUDAExecutionProvider
 )
 ```

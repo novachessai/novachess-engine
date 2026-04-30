@@ -93,12 +93,13 @@ Download the ONNX files from Hugging Face:
 
 ```bash
 huggingface-cli download novachess/novachess-engine \
-  nova.onnx nova.onnx.data --local-dir .
+  nova_v3b.onnx nova_v3b.onnx.data --local-dir .
 ```
 
-Or clone the full HF repo. Both `nova.onnx` and
-`nova.onnx.data` are required — the `.data` file holds the
-weights (external-data format).
+Or clone the full HF repo. Both `nova_v3b.onnx` and
+`nova_v3b.onnx.data` are required, and **must be kept in the same directory
+with their exact filenames** — the `.onnx` file references the `.data`
+sidecar by name (external-data format).
 
 Minimal inference example:
 
@@ -146,7 +147,7 @@ def decode_move_idx(idx: int) -> str:
     return chess.square_name(raw // 64) + chess.square_name(raw % 64) + promo
 
 # --- load model ---
-session = ort.InferenceSession("nova.onnx",
+session = ort.InferenceSession("nova_v3b.onnx",
                                providers=["CPUExecutionProvider"])
 
 # --- run on a position ---
@@ -261,7 +262,7 @@ novachess-engine/
 
 Weights and the 600K evaluation sample are hosted on Hugging Face:
 
-- `nova.onnx` + `nova.onnx.data` — model graph + weights
+- `nova_v3b.onnx` + `nova_v3b.onnx.data` — model graph + weights
 - `unified_sample_600k.pkl` — the validation sample used in RESULTS.md
 
 <https://huggingface.co/novachess/novachess-engine>

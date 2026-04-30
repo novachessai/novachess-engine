@@ -117,10 +117,11 @@ architectures on the move-prediction task itself.
 
 ### Files in this repository
 
-- `nova.onnx` + `nova.onnx.data` — ONNX export with external
-  data. Both files required at inference time; place in the same
-  directory before loading.
-- `nova.pt` — PyTorch checkpoint (weights only) for research
+- `nova_v3b.onnx` + `nova_v3b.onnx.data` — ONNX export with external
+  data. Both files required at inference time and **must keep their
+  exact filenames** — the `.onnx` file embeds a reference to the
+  `.data` sidecar by name. Place in the same directory before loading.
+- `nova_v3b.pt` — PyTorch checkpoint (weights only) for research
   and fine-tuning.
 - `unified_sample_600k.pkl` — the 600K-position out-of-sample
   evaluation set used in the results reported below. Schema:
@@ -341,7 +342,7 @@ def fen_to_planes(fen):
         planes[17, 0, ord(ep[0]) - ord("a")] = 1.0
     return planes
 
-session = ort.InferenceSession("nova.onnx",
+session = ort.InferenceSession("nova_v3b.onnx",
                                providers=["CPUExecutionProvider"])
 
 board = chess.Board()
